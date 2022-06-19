@@ -1,0 +1,25 @@
+nav {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: 100%;
+  height: 8vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+}
+
+nav p {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+nav i {
+  position: absolute;
+  left: 1rem;
+}
+/*# sourceMappingURL=nav.css.map */

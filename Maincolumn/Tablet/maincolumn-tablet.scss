@@ -1,0 +1,67 @@
+@import '../Phone/maincolumn-phone';
+
+.weatherbox {
+    @include d-flex-j-sa();
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 2vh;
+    color: white;
+
+    &-nav {
+        @include d-flex-a-center();
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .weatherbox-grid {
+        display: flex;
+        max-height: 30vh;
+    }
+
+    &-temperature {
+        @include d-flex-center();
+        flex-direction: column;
+        width: 50%;
+
+        &--degree {
+            font-size: 5rem;
+        }
+
+        span {
+            font-size: 1rem;
+            margin-top: 1rem;
+            margin-left: 0.5rem;
+        }
+
+        div {
+            display: flex;
+        }
+    }
+
+    .weatherbox-icon {
+        @include d-flex-center();
+        width: 50%;
+
+        img {
+            height: 75%;
+        }
+    }
+
+    &-footer {
+        @include d-flex-j-sa();
+        width: 50%;
+    }
+}
+
+.weatherboxes {
+    &-box {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+}
+
+.weatherboxes-box {
+    width: calc(25% - 10px) !important;
+    margin-bottom: 20px !important;
+}

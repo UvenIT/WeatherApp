@@ -1,0 +1,96 @@
+/* Mixin d-flex */
+.szukaj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #55eaf9;
+  background: -webkit-gradient(linear, left bottom, left top, from(#55eaf9), color-stop(50%, #b0f4ff), to(#d5f8ff));
+  background: linear-gradient(0deg, #55eaf9 0%, #b0f4ff 50%, #d5f8ff 100%);
+}
+
+.szukaj-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.szukaj-box h1, .szukaj-box input {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.szukaj-box p {
+  margin-bottom: 1rem;
+}
+
+.szukaj input {
+  width: 100%;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.25rem;
+  border: 1px solid lightgrey;
+  border-radius: 0.5rem;
+}
+
+@-webkit-keyframes szukaj {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes szukaj {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loader {
+  -webkit-animation: szukaj 0.9s ease;
+          animation: szukaj 0.9s ease;
+  background: #55eaf9;
+  background: -webkit-gradient(linear, left bottom, left top, from(#55eaf9), color-stop(50%, #b0f4ff), to(#d5f8ff));
+  background: linear-gradient(0deg, #55eaf9 0%, #b0f4ff 50%, #d5f8ff 100%);
+}
+
+.loader h1 {
+  color: #000000;
+}
+/*# sourceMappingURL=search.css.map */

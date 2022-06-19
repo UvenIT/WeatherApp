@@ -1,0 +1,16 @@
+nav{
+    display: flex !important;
+    width: 100%;
+    height: 8vh;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    p{
+        margin: 0;
+        font-size: 1.25rem;
+    }
+    i{
+        position: absolute;
+        left: 1rem;
+    }
+}

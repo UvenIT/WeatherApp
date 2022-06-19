@@ -1,0 +1,26 @@
+@import '../../Mixins/mixins';
+@import '../Phone/rightcolumn-phone';
+.rightcolumn-7day-box{
+    grid-template-columns: 3fr 1fr 1fr !important;
+    h1{
+        text-align: center;
+    }
+}
+.rightcolumn-7day--focusedbox{
+    height: fit-content;
+    &-box{
+        margin-bottom: 1.35rem;
+        width: 32% !important;
+        h4{
+            font-size: 1.75rem;
+        }
+        div{
+            h5{
+                font-size: 1.5rem;
+            } 
+            img{
+                height: 12vh;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import '../../Mixins/mixins';
+.rightcolumn{
+    @include d-flex-j-sb();
+    width: 30%;
+    height: 100vh;
+    padding: 2rem;
+    flex-direction: column;
+    &-nav{
+        @include d-flex-j-sb();
+        height: 20vh;
+        border-radius: 1rem;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+        &--box{
+            @include d-flex-a-center();
+            padding:  1rem 1.3rem;
+            flex-direction: column;
+            border-radius: 1rem;
+            width: calc(25% - 10px);
+            &:hover{
+                background: rgb(204, 242, 253);
+            }
+            img{
+                height: 8vh;
+            }
+        }
+    }
+    &-7day{
+        @include d-flex-j-sb();
+        height: 70vh;
+        flex-direction: column;
+        overflow-y: hidden;
+        &-box{
+            @include d-flex-j-sb();
+            padding: 0.5rem 3rem 0.5rem 1rem;
+            height: 10vh;
+            border-radius: 1rem;
+            align-items: center;
+            .date{
+                width: 30%;
+            }
+            h3{
+                font-size: 1.25rem;
+            }
+            h1{
+                font-size: 2rem;
+            }
+            img{
+                height: 8vh;
+            }
+            &:hover{
+                background: rgb(229, 248, 255);
+            }
+        }
+        &--focusedbox{
+            height: 100%;
+            padding: 1rem 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            &-box{
+                width: 49%;
+                height: 32%;
+                background: rgb(229, 248, 255);
+                border-radius: 1rem;
+                padding: 1rem;
+                div{
+                    text-align: center;
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    align-items: center;
+                }
+                h5{
+                    font-size: 1.35rem;
+                }
+                img{
+                    height: 9vh;
+                }
+            }
+        }
+        &--active{
+            justify-content: start;
+        }
+    }
+}

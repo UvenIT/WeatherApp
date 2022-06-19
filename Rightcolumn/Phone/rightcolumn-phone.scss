@@ -1,0 +1,86 @@
+@import '../../Mixins/mixins';
+.rightcolumn{
+    margin-top: 2rem;
+    &-h2{
+        margin-left: 10px;
+    }
+    h2{
+        margin-bottom: 1rem
+    }
+    &-nav{
+        @include d-flex-j-sb();
+        &--box{
+            @include d-flex-a-center();
+            flex-direction: column;
+            width: calc(25% - 7px);
+            padding: 1rem;
+            border-radius: 1rem;
+            &:focus, &:hover{
+                background: rgb(230, 249, 255);
+            }
+        }
+        h2{
+            font-size: 1.75rem;
+        }
+        img{
+            min-height: 8vh;
+            max-height: 10vh;
+        }
+    }
+    &-7day{
+        margin-top: 2rem;
+        &-box{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 2.5fr 1fr 1fr;
+            align-items: center;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            &:last-child{
+                margin-bottom: 0 !important;
+            }
+            &:hover, &:focus{
+                background: rgb(230, 249, 255);
+            }
+        }
+        img{
+            height: 10vh;
+        }
+        &--focusedbox{
+            height: 800px;
+            padding: 1rem 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            &-box{
+                width: 49%;
+                height: 32%;
+                background: rgb(229, 248, 255);
+                border-radius: 1rem;
+                padding: 1rem;
+                margin-bottom: 10px;
+                div{
+                    margin-top: 2rem;
+                    text-align: center;
+                    display: grid;
+                    grid-template-columns: 2fr 1fr;
+                    align-items: center;
+                }
+                h4{
+                    font-size: 2rem;
+                }
+                h5{
+                    font-size: 1.5rem;
+                }
+                img{
+                    height: 10vh;
+                }
+            }
+        }
+        &--active{
+            justify-content: start;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+/* Mixin d-flex */
+@mixin d-flex-j-sb {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin d-flex-j-sa {
+    display: flex;
+    justify-content: space-around;
+}
+@mixin d-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin d-flex-a-center {
+    display: flex;
+    align-items: center;
+}

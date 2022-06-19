@@ -1,0 +1,79 @@
+@import '../../Mixins/mixins';
+.maincolumn{
+    .searchbox{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding: 0 0.5rem 0 0;
+        input{
+            width: 100%;
+            padding: 15px 10px;
+            border:none;
+            outline: none;
+            font-size: 1.5rem;
+        }
+    }
+    .weatherbox{
+        padding: 2rem;
+        padding-bottom: 1rem;
+        border-radius: 1rem;
+        color: white;
+        &-nav{
+            width: 100%;
+            @include d-flex-j-sb();
+        }
+        &-grid{
+            @include d-flex-j-sb();
+            .weatherbox-temperature{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            h2{
+                font-size: 7rem;
+            }
+            img{
+                height: 25vh;
+            }
+        }
+        &-footer{
+            display: flex;
+            p{
+                margin-right: 1rem;
+            }
+        }
+    }
+    .weatherboxes{
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-box{
+            background: rgb(230, 249, 255);
+            border-radius: 1rem;
+            width: calc(50% - 5px);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 0.5rem;
+            p{
+                display: none;
+            }
+            img{
+                height: 12vh;
+            }
+            h3{
+                font-size: 1.25rem;
+            }
+            h1{
+                font-size: 2rem;
+            }
+            h1, h3{
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@import '../../Mixins/mixins';
+.maincolumn{
+    width: 50%;
+    height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    .searchbox{
+        @include d-flex-a-center();
+        margin-bottom: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        img{
+            height: 1.75rem;
+        }
+        input[type='text']{
+            width: 100%;
+            border: none;
+            padding: 0.5rem 1rem;
+            outline: none;
+            font-size: 1.25rem;
+        }
+    }
+    .weatherbox{
+        @include d-flex-j-sa();
+        flex-direction: column;
+        border-radius: 1rem;
+        padding: 2vh;
+        color: white;
+        &-nav{
+            @include d-flex-a-center();
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .weatherbox-grid{
+            display: flex;
+            max-height: 30vh;
+        }
+        &-temperature{
+            @include d-flex-center();
+            flex-direction: column;
+            width: 50%;
+            &--degree{
+                font-size: 5rem;
+            }
+            span{
+                font-size: 1rem;
+                margin-top: 1rem;
+                margin-left: 0.5rem;
+            }
+            div{
+                display: flex;
+            }
+        }
+        .weatherbox-icon{
+            @include d-flex-center();
+            width: 50%;
+            img{
+                height: 75%;
+            }
+        }
+        &-footer{
+            @include d-flex-j-sa();
+            width: 50%;
+        }
+    }
+    .weatherboxes{
+        @include d-flex-j-sb();
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        &-box{
+            @include d-flex-j-sb();
+            background: rgb(230, 249, 255);
+            width: calc(50% - 10px);
+            height: calc(50% - 20px);
+            border-radius: 1rem;
+            padding: 1rem;
+            &-text{
+                @include d-flex-j-sa();
+                height: 80%;
+                flex-direction: column;
+                h1{
+                    font-size: 2.5rem;
+                }
+            }
+            &--img{
+                @include d-flex-a-center();
+                img{
+                    height: 12.5vh;
+                }
+            }
+        }
+    }
+}

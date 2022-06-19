@@ -1,0 +1,135 @@
+/* Mixin d-flex */
+.rightcolumn {
+  margin-top: 2rem;
+}
+
+.rightcolumn-h2 {
+  margin-left: 10px;
+}
+
+.rightcolumn h2 {
+  margin-bottom: 1rem;
+}
+
+.rightcolumn-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rightcolumn-nav--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(25% - 7px);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.rightcolumn-nav--box:focus, .rightcolumn-nav--box:hover {
+  background: #e6f9ff;
+}
+
+.rightcolumn-nav h2 {
+  font-size: 1.75rem;
+}
+
+.rightcolumn-nav img {
+  min-height: 8vh;
+  max-height: 10vh;
+}
+
+.rightcolumn-7day {
+  margin-top: 2rem;
+}
+
+.rightcolumn-7day-box {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2.5fr 1fr 1fr;
+      grid-template-columns: 2.5fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.rightcolumn-7day-box:last-child {
+  margin-bottom: 0 !important;
+}
+
+.rightcolumn-7day-box:hover, .rightcolumn-7day-box:focus {
+  background: #e6f9ff;
+}
+
+.rightcolumn-7day img {
+  height: 10vh;
+}
+
+.rightcolumn-7day--focusedbox {
+  height: 800px;
+  padding: 1rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.rightcolumn-7day--focusedbox-box {
+  width: 49%;
+  height: 32%;
+  background: #e5f8ff;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.rightcolumn-7day--focusedbox-box div {
+  margin-top: 2rem;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rightcolumn-7day--focusedbox-box h4 {
+  font-size: 2rem;
+}
+
+.rightcolumn-7day--focusedbox-box h5 {
+  font-size: 1.5rem;
+}
+
+.rightcolumn-7day--focusedbox-box img {
+  height: 10vh;
+}
+
+.rightcolumn-7day--active {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+/*# sourceMappingURL=rightcolumn-phone.css.map */
