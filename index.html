@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>WeatherApp</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <div class="szukaj">
+        <div class="szukaj-box">
+            <h1>WeatherApp<img src="/Icons2/01d.svg" style="height: 40px;"></h1>
+            <p>Provide yourself worldwide weather forecast</p>
+            <input type='text' class='city firstinput' placeholder='City name'>
+        </div>
+    </div>
+    <nav class="d-none">
+        <i class="fa-solid fa-bars fa-2xl menu"></i>
+        <p>WeatherApp</p>
+    </nav>
+    <aside class="leftcolumn d-none">
+        <h2 class="header"><i class="fa-solid fa-location-dot"></i>Other location</h2>
+        <div class="leftcolumn-box firstbox">
+            <h5 class="leftcolumn-box--name"></h5>
+            <p class="leftcolumn-box--temp"></p>
+            <img src="" alt="" class="leftcolumn-box--img">
+        </div>
+        <div class="leftcolumn-box">
+            <h5 class="leftcolumn-box--name"></h5>
+            <p class="leftcolumn-box--temp"></p>
+            <img src="" alt="" class="leftcolumn-box--img">
+        </div>
+        <div class="leftcolumn-box">
+            <h5 class="leftcolumn-box--name"></h5>
+            <p class="leftcolumn-box--temp"></p>
+            <img src="" alt="" class="leftcolumn-box--img">
+        </div>
+        <div class="leftcolumn-box">
+            <h5 class="leftcolumn-box--name"></h5>
+            <p class="leftcolumn-box--temp"></p>
+            <img src="" alt="" class="leftcolumn-box--img">
+        </div>
+        <h2><a href="#"><i class="fa-solid fa-bug"></i>Report bug</a></h2>
+        <h2><a href="#"><i class="fa-solid fa-headset"></i>Contact</a></h2>
+        <h2><a href="#"><i class="fa-solid fa-gavel"></i>Privacy policy</a></h2>
+    </aside>
+    <main class="maincolumn d-none">
+        <div class="searchbox">
+            <i class="fa-solid fa-bars fa-2xl menu"></i>
+            <img src="/Icons2/icons8-search.svg" alt="">
+            <input type="text" class="city" placeholder="City name">
+        </div>
+
+        <div class="weatherbox">
+            <div class="weatherbox-nav">
+                <h2 class="weatherbox-nav--city">City name</h2>
+                <p class="weatherbox-nav--date"></p>
+            </div>
+            <div class="weatherbox-grid">
+                <div class="weatherbox-temperature">
+                    <div>
+                        <h2 class="weatherbox-temperature--degree">0°</h2>
+                    </div>
+                    <p class="weatherbox-description">0</p>
+                </div>
+                <div class="weatherbox-icon">
+                    <img src="/Icons/overcast.svg" alt="" class="weatherbox-icon--img">
+                </div>
+            </div>
+            <div class="weatherbox-footer">
+                <p class="weatherbox-footer--pressure">0</p>
+                <p class="weatherbox-footer--windspeed">0</p>
+                <p class="weatherbox-footer--humidity">0</p>
+            </div>
+        </div>
+
+        <div class="weatherboxes">
+            <div class="weatherboxes-box">
+                <div class="weatherboxes-box-text">
+                    <h3>Wind</h3>
+                    <p>Today wind speed</p>
+                    <h1 class="weatherboxes-box--windspeed">12km/h</h1>
+                </div>
+                <div class="weatherboxes-box--img">
+                    <img src="/Icons2/windsock.svg" alt="">
+                </div>
+            </div>
+            <div class="weatherboxes-box">
+                <div class="weatherboxes-box-text">
+                    <h3>Feels like</h3>
+                    <p>Today feels like temperature</p>
+                    <h1 class="weatherboxes-box--feels">13°</h1>
+                </div>
+                <div class="weatherboxes-box--img">
+                    <img src="/Icons2/thermometer-celsius.svg" alt="" class="weatherboxes-box--feelsicon">
+                </div>
+            </div>
+            <div class="weatherboxes-box">
+                <div class="weatherboxes-box-text">
+                    <h3>Sunrise</h3>
+                    <p>Today sunrise time</p>
+                    <h1 class="weatherboxes-box-sunrise">7:53</h1>
+                </div>
+                <div class="weatherboxes-box--img">
+                    <img src="/Icons2/sunrise.svg" alt="">
+                </div>
+            </div>
+            <div class="weatherboxes-box">
+                <div class="weatherboxes-box-text">
+                    <h3>Sunset</h3>
+                    <p>Today sunset time</p>
+                    <h1 class="weatherboxes-box-sunset">19:43</h1>
+                </div>
+                <div class="weatherboxes-box--img">
+                    <img src="/Icons2/sunset.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="rightcolumn d-none">
+        <h2 class="rightcolumn-h2">Today</h2>
+        <div class="rightcolumn-nav">
+            <div class="rightcolumn-nav--box">
+                <h3 class="rightcolumn-nav-navtxt">Now</h3>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-nav--img">
+                <h3 class="rightcolumn-nav--temp">24</h3>
+            </div>
+            <div class="rightcolumn-nav--box">
+                <h3 class="rightcolumn-nav-navtxt">Now</h3>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-nav--img">
+                <h3 class="rightcolumn-nav--temp">24</h3>
+            </div>
+            <div class="rightcolumn-nav--box">
+                <h3 class="rightcolumn-nav-navtxt">Now</h3>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-nav--img">
+                <h3 class="rightcolumn-nav--temp">24</h3>
+            </div>
+            <div class="rightcolumn-nav--box">
+                <h3 class="rightcolumn-nav-navtxt">Now</h3>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-nav--img">
+                <h3 class="rightcolumn-nav--temp">24</h3>
+            </div>
+        </div>
+        <div class="rightcolumn-7day">
+            <div class="rightcolumn-7day-box" onclick="days()">
+                <div class="date">
+                    <h3 class="rightcolumn-7day--day">Wednesday</h3>
+                    <p class="rightcolumn-7day--date">18 April</p>
+                </div>
+                <h1 class="rightcolumn-7day--temp">18°</h1>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-7day--icon">
+            </div>
+            <div class="rightcolumn-7day-box" onclick="days()">
+                <div class="date">
+                    <h3 class="rightcolumn-7day--day">Wednesday</h3>
+                    <p class="rightcolumn-7day--date">18 April</p>
+                </div>
+                <h1 class="rightcolumn-7day--temp">18°</h1>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-7day--icon">
+            </div>
+            <div class="rightcolumn-7day-box" onclick="days()">
+                <div class="date">
+                    <h3 class="rightcolumn-7day--day">Wednesday</h3>
+                    <p class="rightcolumn-7day--date">18 April</p>
+                </div>
+                <h1 class="rightcolumn-7day--temp">18°</h1>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-7day--icon">
+            </div>
+            <div class="rightcolumn-7day-box" onclick="days()">
+                <div class="date">
+                    <h3 class="rightcolumn-7day--day">Wednesday</h3>
+                    <p class="rightcolumn-7day--date">18 April</p>
+                </div>
+                <h1 class="rightcolumn-7day--temp">18°</h1>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-7day--icon">
+            </div>
+            <div class="rightcolumn-7day-box" onclick="days()">
+                <div class="date">
+                    <h3 class="rightcolumn-7day--day">Wednesday</h3>
+                    <p class="rightcolumn-7day--date">18 April</p>
+                </div>
+                <h1 class="rightcolumn-7day--temp">18°</h1>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-7day--icon">
+            </div>
+            <div class="rightcolumn-7day-box" onclick="days()">
+                <div class="date">
+                    <h3 class="rightcolumn-7day--day">Wednesday</h3>
+                    <p class="rightcolumn-7day--date">18 April</p>
+                </div>
+                <h1 class="rightcolumn-7day--temp">18°</h1>
+                <img src="/Icons/clear-day.svg" alt="" class="rightcolumn-7day--icon">
+            </div>
+            <div class="rightcolumn-7day--focusedbox d-none">
+                <div class="rightcolumn-7day--focusedbox-box">
+                    <h4>Pressure</h4>
+                    <div class="rightcolumn-7day--focusedbox-pressure"></div>
+                </div>
+                <div class="rightcolumn-7day--focusedbox-box">
+                    <h4>UV index</h4>
+                    <div class="rightcolumn-7day--focusedbox-uv"></div>
+                </div>
+                <div class="rightcolumn-7day--focusedbox-box">
+                    <h4>Feels like</h4>
+                    <div class="rightcolumn-7day--focusedbox-feels"></div>
+                </div>
+                <div class="rightcolumn-7day--focusedbox-box">
+                    <h4>Wind speed</h4>
+                    <div class="rightcolumn-7day--focusedbox-wind"></div>
+                </div>
+                <div class="rightcolumn-7day--focusedbox-box">
+                    <h4>Humidity</h4>
+                    <div class="rightcolumn-7day--focusedbox-humidity"></div>
+                </div>
+                <div class="rightcolumn-7day--focusedbox-box">
+                    <h4>Rain</h4>
+                    <div class="rightcolumn-7day--focusedbox-prop"></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <footer class="d-none">
+        <div class="footer-links">
+            <h4><a href="#"><i class="fa-solid fa-bug"></i>Report bug</a></h4>
+            <h4><a href="#"><i class="fa-solid fa-headset"></i>Contact</a></h4>
+            <h4><a href="#"><i class="fa-solid fa-gavel"></i>Privacy policy</a></h4>
+        </div>
+        <h2>WeatherApp<img src="/Icons2/01d.svg" style="height: 40px;"></h2>
+    </footer>
+</body>
+<script src='main.js'></script>
+
+</html>

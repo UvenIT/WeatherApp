@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@import 'Mixins/mixins';
+img{
+    pointer-events: none;
+    user-select: none;
+}
+.searchbox{
+    i{
+        display: none;
+    }
+}
+.body-ov--hidden{
+        height: 100vh;
+        overflow: hidden;
+}
+// Search box 1st
+@import 'Search/search';
+/* Mobile */
+@media screen and (max-width: 768px) {
+    body{
+        height: 100vh;
+    }
+    .maincolumn, .rightcolumn, nav{
+        padding: 1rem;
+    }
+    .szukaj{
+        padding: 0 1rem;
+        height: 100%;
+    }
+    @import 'Nav/nav';
+    @import 'Leftcolumn/Phone/leftcolumn-phone';
+    @import 'Maincolumn/Phone/maincolumn-phone';
+    @import 'Rightcolumn/Phone/rightcolumn-phone';
+    footer{
+        display: none;
+    }
+}
+@media screen and (max-width: 575px) {
+    .weatherbox-temperature--degree{
+        font-size: 5rem !important;
+    }
+    .weatherbox-icon--img{
+        height: 20vh !important;
+    }
+    .rightcolumn{
+        &-7day{
+            h3{
+                font-size: 1.25rem;
+            }
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 460px) {
+    .weatherbox-nav--date{
+        display: none;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .leftcolumn, .maincolumn, .rightcolumn{
+        padding: 2rem
+    }
+    @import 'Nav/nav';
+    nav i{
+        left: 2rem;
+    }
+    @import 'Leftcolumn/Tablet/leftcolumn-tablet';
+    @import 'Maincolumn/Tablet/maincolumn-tablet';
+    @import 'Rightcolumn/Tablet/rightcolumn-tablet';
+}
+@media screen and (min-width: 1000px) and (max-width: 1199px){
+    .leftcolumn, .maincolumn, .rightcolumn{
+        padding: 2rem 4rem;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    body{
+        display: flex;
+        height: 100vh;
+    }
+    nav{
+        display: none !important;
+    }
+    @import 'Maincolumn/Desktop/maincolumn-desktop';
+    @import 'Rightcolumn/Desktop/rightcolumn-desktop';
+    footer{
+        position: absolute;
+        width: 100%;
+        top: 100vh;
+        padding: 4rem;
+        @include d-flex-j-sb();
+        h2{
+            margin-right: 10vh;
+        }
+        .footer-links{
+            width: 60%;
+            @include d-flex-j-sa();
+            align-items: center;
+            a{
+                color: black;
+                text-decoration: none;
+                i{
+                    margin-right: 0.5rem;
+                }
+                &:hover{
+                    color: dodgerblue;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1200px) and (max-width:1500px) {
+    @import 'Leftcolumn/Tablet/leftcolumn-tablet'; 
+    .leftcolumn{
+        width: 30% !important;
+    }
+    .maincolumn{
+        width: 60%;
+        .searchbox{
+            i{
+                display: block;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .rightcolumn{
+        width: 40%;
+    }
+}
+@media screen and (min-width: 1500px) {
+    @import 'Leftcolumn/Desktop/leftcolumn-desktop';
+}
