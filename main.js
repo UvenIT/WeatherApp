@@ -20,7 +20,7 @@ window.onload = function () {
     var cities = ['Los%20angeles', 'London', 'Tokio', 'Sydney'];
     var i = 0;
     for (var city of cities) {
-        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=50a7aa80fa492fa92e874d23ad061374&units=metric')
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=')
             .then(response => response.json())
             .then(data => {
                 var tempValues = data['main']['temp'];
@@ -104,7 +104,7 @@ document.querySelectorAll('.city').forEach(item => {
     item.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
             itemvalue = item;
-            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + item.value + '&appid=50a7aa80fa492fa92e874d23ad061374&units=metric')
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + item.value + '&appid=')
                 .then(response => response.json())
                 .then(data => {
                     var tempValue = data['main']['temp'];
@@ -186,7 +186,7 @@ document.querySelectorAll('.city').forEach(item => {
                     };
                 })
                 .catch(err => window.location.reload(true));
-            fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + item.value + '&appid=50a7aa80fa492fa92e874d23ad061374&units=metric')
+            fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + item.value + '&appid=')
                 .then(response => response.json())
                 .then(data => {
                     var timezone = data['city']['timezone'];
@@ -217,7 +217,7 @@ document.querySelectorAll('.city').forEach(item => {
             var right7dayname = document.querySelectorAll('.rightcolumn-7day--day');
             var right7dayicon = document.querySelectorAll('.rightcolumn-7day--icon');
             
-            fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'+ item.value+'?unitGroup=metric&key=EAYHNYG6ZXENASF7PN95L7V9N&contentType=json')
+            fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'+ item.value+'?unitGroup=metric&key=&contentType=json')
                 .then(response => response.json())
                 .then(data => {
                     console.log(data)
@@ -302,7 +302,7 @@ function days() {
     }
     Array.prototype.forEach.call(daybox7, function (daybox7, index) {
         daybox7.addEventListener('click', function () {
-            fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'+ itemvalue.value+'?unitGroup=metric&key=EAYHNYG6ZXENASF7PN95L7V9N&contentType=json')
+            fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'+ itemvalue.value+'?unitGroup=metric&key=&contentType=json')
                 .then(response => response.json())
                 .then(data => {
                     var pressure = Math.round(data['days'][index]['pressure']) + 'hPa';
