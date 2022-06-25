@@ -440,7 +440,9 @@ img {
     height: 10vh;
   }
   .rightcolumn-7day--focusedbox {
-    height: 800px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 1rem 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -455,7 +457,9 @@ img {
   }
   .rightcolumn-7day--focusedbox-box {
     width: 49%;
-    height: 32%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background: #e5f8ff;
     border-radius: 1rem;
     padding: 1rem;
@@ -929,7 +933,9 @@ img {
     height: 10vh;
   }
   .rightcolumn-7day--focusedbox {
-    height: 800px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     padding: 1rem 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -944,7 +950,9 @@ img {
   }
   .rightcolumn-7day--focusedbox-box {
     width: 49%;
-    height: 32%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background: #e5f8ff;
     border-radius: 1rem;
     padding: 1rem;
